@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="tasklist.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
+</head>
+<body>
+    <section id="whole-screen">
+        <section id="screen-two">
+            <main>
+                <h1>Get your day planned with Taskee</h1>
+                <div>
+                <img id="main-image" src="images/main.jpg" alt="main image" width="100%" height="auto" />
+                </div>
+            </main>
+            <div><button id="get-started">Get Started</button></div>
+        </section>
+        <section id="screen-three">
+            <section id="new-tasks">
+                <form id="add-form">
+                    <input id="task-text" type="text" name="task" placeholder="What do you want to do today?"/><br>
+                    <input id="add-task" type="submit" value="Add Task" />
+                </form>
+                <h2>Task List</h2>
+                <input id="search-bar" type="text" placeholder="Find your task"/>
+                <ul id="task-container">
+                    <!-- <li class="task">
+                        Cook 
+                        <div class="ct-icons">
+                        <div><img class="cancel" src="images/close.svg"/></div>
+                        <div><img class="tick" src="images/tick.svg"/></div>
+                        </div>
+                    </li> -->
+                </ul>
+            </section>
+            <section id="completed-tasks">
+                <h2>Completed tasks</h2>
+                <ul id="completed-task-container">
+                    <!-- <li class="task-complete">
+                        Cook
+                    </li> -->
+                </ul>
+            </section>
+            <button id="clear-btn">Clear Task</button>
+        </section>
+    </section>
+<script src="tasklist.js"></script>
+</body>
+</html>

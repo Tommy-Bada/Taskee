@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: cabin;
+}
+
+:root{
+    --get-started-btn: #f38973;
+    --white : #ffffff;
+    --add-task-bg: #588e8e;
+    --clear-btn-bg: #495482;
+    --h2-color: #240f38;
+}
+#whole-screen{
+    display: flex;
+    overflow: hidden;
+}
+/* Screen two */
+#screen-two{
+    text-align: center;
+    height: 100vh;
+    padding: 5rem 2rem;
+    background-color: var(--white);
+    min-width: 100vw;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+h1{
+    font-size: 3rem;
+    color: var(--get-started-btn);
+}
+#main-image{
+    width: 80%;
+}
+#get-started{
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    border: none;
+    color: var(--white);
+    background: var(--get-started-btn);
+    margin-top: 3rem;
+    font-size: 1.4rem;
+}
+#get-started:hover, #get-started:active {
+    background: var(--white);
+    color: var(--get-started-btn);
+    border: 1px solid var(--get-started-btn);
+}
+
+
+/* Screen Three */
+#screen-three{
+    height: 100vh;
+    padding: 5rem 2rem;
+    min-width: 100vw;
+    transition: all 1s ease;
+    background: var(--white);
+}
+#task-text{
+    width: 90%;
+    padding: 1rem;
+    font-size: 1.4rem;
+    border: none;
+    border-bottom: 1px solid black;
+}
+#add-task{
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    border: none;
+    margin-top:1rem;
+    font-size: 1rem;
+    background: var(--add-task-bg);
+    color: var(--white);
+}
+h2{
+    font-size: 2.4rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--h2-color);
+}
+#search-bar{
+    width:80%;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 2rem;
+}
+.task{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 70%;
+    font-size: 1.6rem;
+}
+.ct-icons{
+    width: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.cancel{
+    width:1.2rem;
+    height: auto;
+}
+.tick{
+    width:1.5rem;
+    height: auto;
+}
+
+.task-complete{
+    list-style-type: none;
+    width: 70%;
+}
+.task-complete{
+    font-size: 1.4rem;
+}
+
+#clear-btn{
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    border: none;
+    font-size: 1rem;
+    margin-top: 2rem;
+    background: var(--clear-btn-bg);
+    color: var(--white);
+}
