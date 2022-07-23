@@ -4,6 +4,7 @@
     font-size: 10px;
     font-family: cabin;
     box-sizing: border-box;
+    background: var(--white);
 }
 
 :root{
