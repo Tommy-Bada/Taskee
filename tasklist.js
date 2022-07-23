@@ -172,7 +172,8 @@ function moveToMainScreen(){
     const screenTwo = document.querySelector("#screen-two");
     const screenThree = document.querySelector("#screen-three");
     const wholeScreen = document.querySelector("#whole-screen");
-    screenThree.style.marginLeft = "-100vw"
+    screenThree.style.marginLeft = "-100vw";
+    screenTwo.style.opacity = 0;
 
 }
 
