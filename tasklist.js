@@ -44,13 +44,13 @@ let completedTaskContainer = document.querySelector("#completed-task-container")
 // Complete or Delete Task
 function compltdDelTask(e){
     if(e.target.classList.contains("cancel")){
-        if(confirm("Are you sure")){
+        if(confirm("Are you sure?")){
         e.target.parentElement.parentElement.parentElement.remove();
         removeFromLS( e.target.parentElement.parentElement.parentElement);
         }
     }
     if(e.target.classList.contains("tick")){
-        alert("Well done mate. Keep smashing your goals");
+        alert("Well done mate. Keep smashing your goals.");
         completedTaskContainer.appendChild( e.target.parentElement.parentElement.parentElement);
         fixInLS(e.target.parentElement.parentElement.parentElement);
         e.target.parentElement.parentElement.remove();

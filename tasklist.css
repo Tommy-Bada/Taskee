@@ -15,7 +15,7 @@
 }
 #whole-screen{
     display: flex;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 /* Screen two */
 #screen-two{
