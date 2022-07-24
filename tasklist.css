@@ -4,7 +4,6 @@
     font-size: 10px;
     font-family: cabin;
     box-sizing: border-box;
-    background: var(--white);
 }
 
 :root{
@@ -25,6 +24,8 @@
     padding: 5rem 2rem;
     background-color: var(--white);
     min-width: 100vw;
+    transition: all 0.4s ease;
+    overflow-x: none;
 }
 
 header{
@@ -60,7 +61,7 @@ h1{
     height: 100vh;
     padding: 5rem 2rem;
     min-width: 100vw;
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
     background: var(--white);
 }
 #task-text{
