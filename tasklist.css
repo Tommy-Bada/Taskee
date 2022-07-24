@@ -120,11 +120,12 @@ h2{
 
 .task-complete{
     list-style-type: none;
+    padding: 1rem;
     width: 70%;
+    font-size: 1.6rem;
+    background: var(--white);
 }
-.task-complete{
-    font-size: 1.4rem;
-}
+
 
 #clear-btn{
     padding: 1rem 2rem;

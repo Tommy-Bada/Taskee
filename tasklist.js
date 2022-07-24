@@ -31,7 +31,6 @@ function storeInLs(task){
     }
     tasks.push(task)
     localStorage.setItem('tasks', JSON.stringify(tasks))
-    console.log(tasks)
 }
 
 addTask.addEventListener("submit", createTask);
@@ -52,7 +51,8 @@ function compltdDelTask(e){
     if(e.target.classList.contains("tick")){
         alert("Well done mate. Keep smashing your goals.");
         completedTaskContainer.appendChild( e.target.parentElement.parentElement.parentElement);
-        fixInLS(e.target.parentElement.parentElement.parentElement);
+        fixFromLS(e.target.parentElement.parentElement.parentElement);
+        fixInLS(e.target.parentElement.parentElement.parentElement.firstChild.textContent);
         e.target.parentElement.parentElement.remove();
     }
 }
@@ -67,9 +67,8 @@ function removeFromLS(rmvTask){
     } 
 
     tasks.forEach(function(task, index){
-        if(rmvTask.textContent === task){
+        if(task === rmvTask.firstChild.textContent){
             tasks.splice(index, 1)
-            // console.log("drink")
         }
     });
 
@@ -77,7 +76,8 @@ function removeFromLS(rmvTask){
 }
 
 // Fix Completed task in local storage
-function fixInLS(cpltdTask){
+// Remove completed task from Local Storage
+function fixFromLS(cpltdTask){
     let tasks;
     if(localStorage.getItem('tasks') === null){
         tasks = [];
@@ -86,12 +86,25 @@ function fixInLS(cpltdTask){
     }
 
     tasks.forEach(function(task, index){
-        if(cpltdTask.textContent === task){
+        if(cpltdTask.firstChild.textContent === task){
             tasks.splice(index, 1)
         }
     });
 
     localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+// Add to another local storage
+function fixInLS(completedTask){
+    let completedTasks ;
+    if(localStorage.getItem('completedTasks') === null){
+        completedTasks = [];
+    } 
+    else{
+        completedTasks = JSON.parse(localStorage.getItem('completedTasks'));
+    };
+    
+    completedTasks.push(completedTask);
+    localStorage.setItem('completedTasks', JSON.stringify(completedTasks));
 }
 
 taskContainer.addEventListener("click", compltdDelTask)
@@ -163,6 +176,26 @@ function getTask(){
 document.addEventListener('DOMcontentloaded', getTask);
 
 
+//Get completed task from Local storage
+getCompletedTask()
+
+function getCompletedTask(){
+    let completedTasks;
+    if(localStorage.getItem('completedTasks') === null){
+        completedTasks = [];
+    } else{
+        completedTasks = JSON.parse(localStorage.getItem('completedTasks'));
+    }
+
+    completedTasks.forEach(function(completedTask){
+        let cTask = document.createElement("li")
+        cTask.classList.add("task-complete")
+        cTask.appendChild(document.createTextNode(completedTask));
+        completedTaskContainer.appendChild(cTask);
+    })
+}
+
+document.addEventListener('DOMcontentloaded', getCompletedTask);
 
 
 
