@@ -140,6 +140,16 @@ function search(e){
         list.style.display = "none"
     }
     })
+
+
+    document.querySelectorAll(".task-complete").forEach(function(list){
+        if (list.firstChild.textContent.toLowerCase().indexOf(e.target.value.toLowerCase()) != -1){
+            list.style.display = "block"
+        }
+        else{
+            list.style.display = "none"
+        }
+        })
 }
 
 searchTab.addEventListener("keyup", search);
