@@ -55,6 +55,33 @@ h1{
     border: 1px solid var(--get-started-btn);
 }
 
+#new-tasks{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+#filterer{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+#search-bar{
+    width:60%;
+    font-size: 1.6rem;
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+
+#edit-form{
+    display: none;
+}
 
 /* Screen Three */
 #screen-three{
@@ -64,14 +91,15 @@ h1{
     transition: all 0.5s ease;
     background: var(--white);
 }
-#task-text{
-    width: 90%;
+#task-text, #task-date, #task-time, #edit-text, #edit-date, #edit-time{
+    width: 100%;
     padding: 1rem;
     font-size: 1.4rem;
     border: none;
     border-bottom: 1px solid black;
 }
-#add-task{
+
+#add-task, #edit-task{
     padding: 1rem 2rem;
     border-radius: 5rem;
     border: none;
@@ -80,51 +108,75 @@ h1{
     background: var(--add-task-bg);
     color: var(--white);
 }
+#edit-task{
+    background: #f38973;
+}
 h2{
     font-size: 2.4rem;
     margin-top: 3rem;
     margin-bottom: 1.5rem;
     color: var(--h2-color);
 }
-#search-bar{
-    width:80%;
-    padding: 1rem 2rem;
-    font-size: 1.6rem;
-    border: none;
-    border-bottom: 1px solid black;
-    margin-bottom: 2rem;
-}
-.task{
+li{
     list-style-type: none;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    width: 70%;
+    width: 100%;
     font-size: 1.6rem;
     background: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    margin-bottom: 1rem;
 }
+.task-text, .task-text>b{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    
+}
+.task-date, .task-date>b{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.task-time, .task-time>b{
+    font-size: 1.2rem;
+}
+
 .ct-icons{
-    width: 5rem;
+    margin-top: 1rem;
+    width: 65%;
     display: flex;
     justify-content: space-between;
 }
-.cancel{
-    width:1.2rem;
-    height: auto;
+.cancel, .start, .tick, .edit, .tick-from-progress{
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
 }
-.tick{
-    width:1.5rem;
-    height: auto;
+.start{
+    color: white;
+    background: #588e8e;
+}
+.tick, .tick-from-progress{
+    color: white;
+    background: #495482;
+}
+.edit{
+    color: white;
+    background: #9562c5;
+}
+.cancel{
+    color: white;
+    background: #f38973;
 }
 
-.task-complete{
+.task-complete, .task-in-progress{
     list-style-type: none;
     padding: 1rem;
-    width: 70%;
     font-size: 1.6rem;
     background: var(--white);
 }
+
 
 
 #clear-btn{

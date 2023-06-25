@@ -22,10 +22,24 @@
             <section id="new-tasks">
                 <form id="add-form">
                     <input id="task-text" type="text" name="task" placeholder="What do you want to do today?"/><br>
+                    <input id="task-date" type="text" name="date" placeholder="Due Date"
+                    onfocus="(this.type='date')"/><br>
+                    <input id="task-time" type="text" name="time" placeholder="Due Time"
+                    onfocus="(this.type='time')"/><br>
                     <input id="add-task" type="submit" value="Add Task" />
                 </form>
-                <h2>Task List</h2>
-                <input id="search-bar" type="text" placeholder="Find your task"/>
+                <form id="edit-form">
+                    <input id="edit-text" type="text" name="task"/><br>
+                    <input id="edit-date" type="date" name="date"/><br>
+                    <input id="edit-time" type="time" name="time"/><br>
+                    <input id="edit-task" type="submit" value="Update Task" />
+                </form>
+            </section>
+
+            <section id="filterer"><input id="search-bar" type="text" placeholder="Find your task"/></section>
+
+            <section id="tasks">
+                <h2>PENDING</h2>
                 <ul id="task-container">
                     <!-- <li class="task">
                         Cook 
@@ -36,15 +50,24 @@
                     </li> -->
                 </ul>
             </section>
+
+            <section id="in-progress-tasks">
+                <h2>IN PROGRESS</h2>
+                <ul id="in-progress-task-container">
+
+                </ul>
+            </section>
+
             <section id="completed-tasks">
-                <h2>Completed tasks</h2>
+                <h2>COMPLETED</h2>
                 <ul id="completed-task-container">
                     <!-- <li class="task-complete">
                         Cook
                     </li> -->
                 </ul>
             </section>
-            <button id="clear-btn">Clear Task</button>
+            
+            <button id="clear-btn">Clear Tasks</button>
         </section>
     </section>
 <script src="tasklist.js"></script>
